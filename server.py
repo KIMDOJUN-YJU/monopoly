@@ -1,10 +1,3 @@
-#############################
-# Socket server starter code from 15-112 Sockets manual
-# Sockets Server Demo
-# by Rohan Varma
-# adapted by Kyle Chin
-#############################
-
 import sys
 import pygame
 import socket
@@ -12,9 +5,9 @@ import threading
 from queue import Queue
 
 if (len(sys.argv)) == 1:
-  HOST = "" # Server can now only be accessed on this machine
+  HOST = "" 
 else:
-  HOST = str(sys.argv[1]) # IP address that the user must supply when running the python file
+  HOST = str(sys.argv[1]) 
 PORT = 50003
 BACKLOG = 4
 
@@ -38,7 +31,7 @@ def handleClient(client, serverChannel, cID, clientele):
         serverChannel.put(str(cID) + " " + readyMsg)
         command = msg.split("\n")
     except:
-      # we failed
+      
       return
 
 def serverThread(clientele, serverChannel):
@@ -68,7 +61,6 @@ names = ["Hulk", "Captain", "Dare", "IronMan"]
 
 while True:
   client, address = server.accept()
-  # myID is the key to the client in the clientele dictionary
   myID = names[playerNum]
   print(myID, playerNum)
   for cID in clientele:

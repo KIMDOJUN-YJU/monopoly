@@ -1,19 +1,3 @@
-# This is a dictionary containing the stats of every card in mononpoly
-# The meanings of the values are determined by their index and as follows:
-# [0]: Tuple of the coordinates where piece will be placed when on property
-# [1]: Name of the property
-# [2]: Property type
-# [3]: Price of properties
-# [4]: List of rent prices in ascending order (depends on houses)
-# [5]: Mortgage Value
-# [6]: Price to build each house
-# [7]: Number of houses on the property
-# [8]: Building code
-
-# Note: Only properties have index 4-7, because they only apply to that type
-
-# Position Variables
-
 botY = 700
 topY = 16
 leftX = 27
@@ -51,7 +35,6 @@ cards = {
         }
 
 
-# The layout of the monopoly board
 
 gameBoard = [
 
